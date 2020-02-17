@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-server
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.244.129:3306/test
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
