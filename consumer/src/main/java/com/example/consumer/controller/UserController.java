@@ -12,6 +12,8 @@ public class UserController {
     private UserService userService;
     @GetMapping("/api/consumer/getUserInfo/{id}")
     public User getUserInfo(@PathVariable("id") Integer id){
+        System.out.println("api/consumer/getUserInfo/");
+//        System.out.println(userService.getUserInfoByServer(id).toString());
         return userService.getUserInfoByServer(id);
     }
 }
