@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="apollo" />
+        <module name="cache" />
         <module name="commer" />
         <module name="consumer" />
         <module name="hystix" />
@@ -20,6 +22,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apollo" options="-parameters" />
+      <module name="cache" options="-parameters" />
       <module name="comm" options="-parameters" />
       <module name="commer" options="-parameters" />
       <module name="consumer" options="-parameters" />

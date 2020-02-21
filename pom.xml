@@ -56,5 +56,6 @@
         <module>server</module>
         <module>consumer</module>
         <module>register</module>
+        <module>apollo</module>
     </modules>
 </project>

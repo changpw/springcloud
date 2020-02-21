@@ -3,6 +3,7 @@ package com.example.server.controller;
 import com.cpw.commer.domain.User;
 import com.example.server.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +13,9 @@ public class UserCtroller {
     @Autowired
     private UserMapper userMapper;
     @GetMapping("/api/getUserInfo/{id}")
+    @Cacheable(cacheNames = "userInfo")
     public User getUser(@PathVariable("id") Integer id){
+        System.out.println("search"+id);
         return userMapper.getUserInfo(id);
     }
     @PostMapping("/api/insertUser/")
